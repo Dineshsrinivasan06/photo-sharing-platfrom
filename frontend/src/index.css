@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+button {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 400px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+}
+
+.auth-card button {
+  width: 100%;
+}
+
+.error {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.navbar {
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+}
+
+.dashboard,
+.page {
+  padding: 30px;
+}
+
+.dashboard-grid,
+.event-grid,
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+  gap: 20px;
+}
+
+.dashboard-card,
+.event-card,
+.photo-card {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.photo-grid {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(180px, 1fr)
+  );
+}
+
+.photo-card {
+  min-height: 120px;
+}
+.success {
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 6px;
+  background: #e8f5e9;
+}
+
+.upload-section {
+  background: white;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 12px;
+}
+
+.upload-section input {
+  margin-top: 10px;
+}
+
+.upload-section button {
+  margin-top: 10px;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary-button {
+  background: #222;
+  color: white;
+}
+
+.secondary-button {
+  background: #eee;
+  color: #222;
+}
+
+.photo-summary {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.admin-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(220px, 1fr)
+  );
+  gap: 20px;
+}
+
+.admin-photo-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid transparent;
+}
+
+.admin-photo-card.selected {
+  border-color: #222;
+}
+
+.photo-image-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: #eee;
+}
+
+.photo-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.selected-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.photo-info {
+  padding: 15px;
+}
+
+.filename {
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.empty-state {
+  background: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.gallery-form {
+  max-width: 500px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.gallery-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.gallery-form button {
+  background: #222;
+  color: white;
+}
+
+.gallery-created {
+  max-width: 600px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.share-box {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.share-box code {
+  display: block;
+  padding: 12px;
+  word-break: break-all;
+  background: white;
+}
+
+.customer-gallery {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f5f5f5;
+}
+
+.pin-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pin-container h1 {
+  margin-bottom: 10px;
+}
+
+.pin-container p {
+  color: #666;
+}
+
+.pin-container form {
+  margin-top: 25px;
+}
+
+.pin-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.pin-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.error {
+  margin-top: 15px;
+  color: red;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.customer-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.customer-photo-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.customer-photo-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
